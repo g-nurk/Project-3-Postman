@@ -1,0 +1,1831 @@
+{
+	"info": {
+		"_postman_id": "1a370229-2d0e-4c72-86f0-2665f907251d",
+		"name": "Project 3, Sprint 1 & 2, Gätlin Nurk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27624926"
+	},
+	"item": [
+		{
+			"name": "Funnels",
+			"item": [
+				{
+					"name": "GET - get the list of all funnels",
+					"item": [
+						{
+							"name": "Get list of Funnels",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Funnels - no authToken",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Funnels - positive limit",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel?limit=2",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Funnels - limit 0",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel?limit=0",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Funnels - negative limit",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel?limit=-3",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "-3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Funnels - maximum limit exceeded",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel?limit=102",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "102"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Funnels - positive cursor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel?cursor=2",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									],
+									"query": [
+										{
+											"key": "cursor",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Funnels - negative cursor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel?cursor=-3",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									],
+									"query": [
+										{
+											"key": "cursor",
+											"value": "-3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Funnels - positive limit and cursor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel?limit=1&cursor=2",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "1"
+										},
+										{
+											"key": "cursor",
+											"value": "2"
+										},
+										{
+											"key": "limit",
+											"value": "0",
+											"disabled": true
+										},
+										{
+											"key": "cursor",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Funnels - negative limit and cursor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel?limit=-3&cursor=-2",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "-3"
+										},
+										{
+											"key": "cursor",
+											"value": "-2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Funnels - sorting created date",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel?sort_field=Created Date",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									],
+									"query": [
+										{
+											"key": "sort_field",
+											"value": "Created Date"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Funnels - sorting name_text",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel?sort_field=name_text&descending=true",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									],
+									"query": [
+										{
+											"key": "sort_field",
+											"value": "name_text"
+										},
+										{
+											"key": "descending",
+											"value": "true"
+										},
+										{
+											"key": "descending",
+											"value": "false",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Funnels - constraints members_list_user not empty",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel?constraints=[{\"key\": \"members_list_user\", \"constraint_type\": \"not empty\"}]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									],
+									"query": [
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"members_list_user\", \"constraint_type\": \"not empty\"}]"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Funnels - constraints members_list_user empty",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel?constraints=[{\"key\": \"members_list_user\", \"constraint_type\": \"empty\"}]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									],
+									"query": [
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"members_list_user\", \"constraint_type\": \"empty\"}]"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Funnels - constraints members_list_user contains",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel?constraints=[{\"key\": \"members_list_user\", \"constraint_type\": \"contains\", \"value\": \"1657897085311x920666300518670800\"}]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									],
+									"query": [
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"members_list_user\", \"constraint_type\": \"contains\", \"value\": \"1657897085311x920666300518670800\"}]"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Funnels - constraints name_text",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel?constraints=[{\"key\": \"name_text\", \"constraint_type\": \"equals\", \"value\":\"Team6 E2E Funnel1\"}]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									],
+									"query": [
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"name_text\", \"constraint_type\": \"equals\", \"value\":\"Projects funnel\"}]",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"name_text\", \"constraint_type\": \"equals\", \"value\":\"Offers funnel\"}]",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"name_text\", \"constraint_type\": \"equals\", \"value\":\"Lead acquisition funnel\"}]",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"name_text\", \"constraint_type\": \"equals\", \"value\":\"Team6 test Funnel1\"}]",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"name_text\", \"constraint_type\": \"equals\", \"value\":\"Team6 E2E Funnel1\"}]"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "GET - funnel by Id",
+					"item": [
+						{
+							"name": "Get Funnel by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel",
+										":UniqueID"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1724499128671x933998174446026800"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Funnel by Id - no authToken",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1678718113594x500417408037027840"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Funnel by Id - invalid UniqueID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1678718113594y500417408037027842"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "POST - create new funnel",
+					"item": [
+						{
+							"name": "Create  a new Funnel - through CRM Y app",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"members_list_user\": [\n    \"1625051658962x581289845978797800\"\n  ],\n  \"name_text\": \"Team6 test Funnel1\",\n  \"stage_list_custom_stage\": [\n    \"1724499130221x318003494573472900\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create  a new Funnel - through Postman",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"members_list_user\": [\n    \"1625051658962x581289845978797800\"\n  ],\n  \"name_text\": \"Team6 test Funnel3\",\n  \"stage_list_custom_stage\": [\n    \"1625047833003x411752455944692100\",\n    \"1625057726222x528840700164866750\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create  a new Funnel - through Postman, no authToken",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"members_list_user\": [\n    \"1625051658962x581289845978797800\"\n  ],\n  \"name_text\": \"Team6 test Funnel4\",\n  \"stage_list_custom_stage\": [\n    \"1625047833003x411752455944692100\",\n    \"1625057726222x528840700164866750\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create  a new Funnel - empty body",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create  a new Funnel - empty body fields",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"members_list_user\": [\n    \"\",\n    \"\"\n  ],\n  \"name_text\": \"\",\n  \"stage_list_custom_stage\": [\n    \"\",\n    \"\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "PATCH - modify funnel data",
+					"item": [
+						{
+							"name": "Modify Funnel by Id - name_text",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"members_list_user\": [\r\n    \"1625051658962x581289845978797800\"\r\n  ],\r\n  \"name_text\": \"Team6 test Funnel2.1\",\r\n  \"stage_list_custom_stage\": [\r\n    \"1724499130221x318003494573472900\"\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1724500273595x502531907865006140"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify Funnel by Id - name_text, no authToken",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"members_list_user\": [\r\n    \"1625051658962x581289845978797800\"\r\n  ],\r\n  \"name_text\": \"Team6 test Funnel2.1\",\r\n  \"stage_list_custom_stage\": [\r\n    \"1724499130221x318003494573472900\"\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1724500273595x502531907865006140"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify Funnel by Id - empty body",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1724749346605x542241452800868350"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify Funnel by Id - empty body fields",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"members_list_user\": [\r\n    \"\",\r\n    \"\"\r\n  ],\r\n  \"name_text\": \"\",\r\n  \"stage_list_custom_stage\": [\r\n    \"\",\r\n    \"\"\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1724500273595x502531907865006140"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "PUT - replace funnel data",
+					"item": [
+						{
+							"name": "Replace Funnel by Id - all body fields",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"members_list_user\": [\r\n    \"1625047362532x398219546419355650\",\r\n    \"1625125825767x718816571317085800\"\r\n  ],\r\n  \"name_text\": \"Team6 test5\",\r\n  \"stage_list_custom_stage\": [\r\n    \"1627400587242x956576737922289400\",\r\n    \"1627400582943x524382017210700500\"\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1724668720655x248180749797272350"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace Funnel by Id - all body fields, no authToken",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"members_list_user\": [\r\n    \"1625047373081x778685405315052900\"\r\n  ],\r\n  \"name_text\": \"Team6 test6\",\r\n  \"stage_list_custom_stage\": [\r\n    \"1625047829315x658646823454309500\",\r\n    \"1724499130221x318003494573472900\"\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1724668720655x248180749797272350"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace Funnel by Id - empty body fields",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"members_list_user\": [\r\n    \"\",\r\n    \"\"\r\n  ],\r\n  \"name_text\": \"\",\r\n  \"stage_list_custom_stage\": [\r\n    \"\",\r\n    \"\"\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1724668720655x248180749797272350"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace Funnel by Id - empty body",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1724668720655x248180749797272350"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "DELETE - remove funnel data",
+					"item": [
+						{
+							"name": "Delete Funnel by Id - valid UniqueID",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1724749346605x542241452800868350"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Funnel by Id - invalid UniqueID",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1724661r34357y7278058065809518s0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Funnel by Id - valid UniqueID, no authToken",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/funnel/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"funnel",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1724668720655x248180749797272350"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "POST - create a new note",
+					"item": [
+						{
+							"name": "Create a new Note",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"Team6 note to be deleted after2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Note - no authToken",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"Team6 test2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Note - empty body",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Note - empty body field",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Note - incorrect value - boolean",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Note - empty content",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\":\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PATCH - update a note",
+					"item": [
+						{
+							"name": "Update a Note - incorrect value - symbols",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": !!!**&&\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1725365391323x462334289236287170"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a Note",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"Team6 E2E note is now updated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1726070192509x612500654574010400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a Note - no authToken",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"Team6 note update2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1725365391323x462334289236287170"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a Note - empty body",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1725365391323x462334289236287170"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a Note - empty body field",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1725365391323x462334289236287170"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a Note - empty content",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\":\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1725365391323x462334289236287170"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PUT - replace a note",
+					"item": [
+						{
+							"name": "Replace a Note - incorrect value - numbers",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": 87996532\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1725365391323x462334289236287170"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace a Note - empty body",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1725365391323x462334289236287170"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace a Note - empty body field",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1725365391323x462334289236287170"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace a Note - empty content",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\":\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1725365391323x462334289236287170"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace a Note",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"Replacing the note of team6\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1725609903882x801669176705024800"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace a Note - no authToken",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"Replacing the note of team6 again\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1725609903882x801669176705024800"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
