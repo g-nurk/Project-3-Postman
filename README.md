@@ -1,12 +1,12 @@
 Examples from my work:
 
-[Click here to see my Test Cases for project 3](C:/Users/G-Bli/Downloads/Test%20Cases%20for%20project%203.pdf)
+[Click here to see my Test Cases for project 3](https://acrobat.adobe.com/id/urn:aaid:sc:EU:6acbde64-d256-4e10-9878-2f24def67856)
 
-[Click here to see my Bug Report examples for project 3](file:///C:/Users/G-Bli/Downloads/Project%203%20Bug%20Report%20examples.pdf)
+[Click here to see my Bug Report examples for project 3](https://acrobat.adobe.com/id/urn:aaid:sc:EU:ddd4807c-c781-498b-8e37-bd4ace97acd5)
 
-[Click here to see my End-to-End test cases for project 3](file:///C:/Users/G-Bli/Downloads/End-to-end%20test%20cases%20for%20project%203.pdf)
+[Click here to see my End-to-End test cases for project 3](https://acrobat.adobe.com/id/urn:aaid:sc:EU:57baa26d-2d79-42f3-8f77-5a377cecd9c9)
 
-[Click here to see my Final Testing Report for project 3](file:///C:/Users/G-Bli/Downloads/Final%20Testing%20Report%20for%20project%203.pdf)
+[Click here to see my Final Testing Report for project 3](https://acrobat.adobe.com/id/urn:aaid:sc:EU:b5902bb7-ec54-4487-8f2a-dfadf2e6fb16)
 
 Our third project was: “CRM” which was “Customer Relationship Management Platform”. Our customer was a digital agency Elevate Digital, which offers innovative marketing and web design solutions. Because of the number of different projects that they're working on and also the high number of customers, the company is using a CRM or customer relationship management software to organize their marketing and sales processes.
 
