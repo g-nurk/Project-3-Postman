@@ -1,6 +1,6 @@
 Examples from my work:
 
-[Click here to see my Test Cases for project 3](file:///C:/Users/G-Bli/Downloads/Test%20Cases%20for%20project%203.pdf)
+[Click here to see my Test Cases for project 3](C:/Users/G-Bli/Downloads/Test%20Cases%20for%20project%203.pdf)
 
 [Click here to see my Bug Report examples for project 3](file:///C:/Users/G-Bli/Downloads/Project%203%20Bug%20Report%20examples.pdf)
 
