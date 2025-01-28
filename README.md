@@ -1,5 +1,3 @@
-Examples from my work:
-
 [Click here to see my project 3 Test Cases](https://acrobat.adobe.com/id/urn:aaid:sc:EU:174a86b8-d315-4296-9431-92361e4716fc)
 
 [Click here to see my project 3 Bug Report examples](https://acrobat.adobe.com/id/urn:aaid:sc:EU:e0290501-f593-4815-ae8a-5c533288f66a)
@@ -8,7 +6,7 @@ Examples from my work:
 
 [Click here to see my project 3 Final Testing Report](https://acrobat.adobe.com/id/urn:aaid:sc:EU:6b6f4cec-0b79-4b28-bdf2-cc1ca16efb97)
 
-Our third project was: “CRM” which was “Customer Relationship Management Platform”. Our customer was a digital agency Elevate Digital, which offers innovative marketing and web design solutions. Because of the number of different projects that they're working on and also the high number of customers, the company is using a CRM or customer relationship management software to organize their marketing and sales processes.
+My third project at Cerebrum Hub was: “CRM” which was “Customer Relationship Management Platform”. Our customer was a digital agency Elevate Digital, which offers innovative marketing and web design solutions. Because of the number of different projects that they're working on and also the high number of customers, the company is using a CRM or customer relationship management software to organize their marketing and sales processes.
 
 There are three main business processes that are supported: CRM is used to collect all potential customers that come from different marketing channels and ensure that those customers are receiving proper communication or marketing activities; If customers have specific needs and are interested to move forward with this digital agency, there is a process of negotiating terms, preparing offers, and finally signing a contract - the process of closing sales; The third business process that CRM is supporting is the management of the projects that are already solved.
 
